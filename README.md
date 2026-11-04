@@ -1,4 +1,4 @@
-<img width="720" height="504" alt="Diagrama Biologico P3" src="https://github.com/user-attachments/assets/f1cba138-3eb8-4f58-b75a-92716b43e450" /># Práctica 3. Sistema musculoesquelético
+# Práctica 3. Sistema musculoesquelético
 
 Repositorio académico de la asignatura **Modelado de Sistemas Fisiológicos**, correspondiente al programa de **Ingeniería Biomédica** del Tecnológico Nacional de México / Instituto Tecnológico de Tijuana. Esta práctica integra modelado mecánico, analogía electromecánica, formulación matemática, análisis temporal y de estabilidad, control clásico y verificación computacional.
 
@@ -469,6 +469,7 @@ El diagrama relaciona tres niveles de representación:
 
 La diferencia entre control y caso se representa mediante $R=100\,\Omega$ y $R=10\,\mathrm{k}\Omega$, respectivamente. Esta modificación permite estudiar el efecto dinámico de una mayor componente viscosa, pero no reproduce por sí sola la complejidad anatómica, metabólica y neural de la atrofia muscular real.
 
+<img width="720" height="504" alt="Diagrama Biologico P3" src="https://github.com/user-attachments/assets/d5573f8f-e07e-4f41-a3d6-ab974b0caac4" />
 
 ### Limitaciones fisiológicas
 
