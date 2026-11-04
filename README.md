@@ -362,7 +362,7 @@ $$
 C(s)=K_p+\frac{K_i}{s}.
 $$
 
-| Parámetro | Valor en `sistema.slx` | Valor utilizado en Python |
+| Parámetro | Valor en `sistemaP3.slx` | Valor utilizado en Python |
 |---|---:|---:|
 | $K_p$ | $0.2173899463$ | $0.217$ |
 | $K_i$ | $3665.0362421\,\mathrm{s}^{-1}$ | $3665.036\,\mathrm{s}^{-1}$ |
@@ -416,7 +416,7 @@ R_e=\frac{1}{C_rK_i}=272.85\,\Omega,
 R_r=K_pR_e=59.31\,\Omega.
 $$
 
-Estos valores son cálculos nominales. La práctica 5.5 se desarrolla exclusivamente *in silico* y los archivos aportados no documentan una construcción física del controlador.
+Estos valores son cálculos nominales. La práctica 3 se desarrolla exclusivamente *in silico* y los archivos aportados no documentan una construcción física del controlador.
 
 [Volver al contenido](#contenido)
 
@@ -435,7 +435,7 @@ Estos valores son cálculos nominales. La práctica 5.5 se desarrolla exclusivam
 6. Construye el sistema del caso en retroalimentación negativa.
 7. Calcula las respuestas forzadas.
 8. Grafica entrada, control, caso y tratamiento.
-9. Guarda la figura como `Impulso_python.pdf`.
+9. Guarda la figura como `Señal_python.pdf`.
 
 La función principal del modelo es:
 
