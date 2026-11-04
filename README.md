@@ -1,4 +1,4 @@
-# Práctica 5.5 - Modelado y control del sistema musculoesquelético
+<img width="720" height="504" alt="Diagrama Biologico P3" src="https://github.com/user-attachments/assets/f1cba138-3eb8-4f58-b75a-92716b43e450" /># Práctica 3. Sistema musculoesquelético
 
 Repositorio académico de la asignatura **Modelado de Sistemas Fisiológicos**, correspondiente al programa de **Ingeniería Biomédica** del Tecnológico Nacional de México / Instituto Tecnológico de Tijuana. Esta práctica integra modelado mecánico, analogía electromecánica, formulación matemática, análisis temporal y de estabilidad, control clásico y verificación computacional.
 
@@ -10,9 +10,9 @@ El caso de estudio representa un compartimento musculoesquelético mediante un e
 **Institución:** Tecnológico Nacional de México / Instituto Tecnológico de Tijuana  
 **Asignatura:** Modelado de Sistemas Fisiológicos  
 **Programa:** Ingeniería Biomédica  
-**Estudiante:** Gabriel Fernando Trejo Paz  
-**Número de control:** 23212239  
-**Correo institucional:** L23212239@tectijuana.edu.mx  
+**Estudiante:** Vanessa Yamileth Suarez Ceja  
+**Número de control:** 23212236  
+**Correo institucional:** L23212236@tectijuana.edu.mx  
 **Sede:** Blvd. Alberto Limón Padilla s/n, Tijuana, C. P. 22454, B. C., México.
 
 > **Alcance:** el controlador desarrollado tiene fines exclusivamente académicos y de simulación. No constituye una estrategia terapéutica para el tratamiento de la atrofia muscular.
@@ -468,6 +468,7 @@ El diagrama relaciona tres niveles de representación:
 3. **Circuito equivalente:** fuentes de voltaje, resistencia y capacitores.
 
 La diferencia entre control y caso se representa mediante $R=100\,\Omega$ y $R=10\,\mathrm{k}\Omega$, respectivamente. Esta modificación permite estudiar el efecto dinámico de una mayor componente viscosa, pero no reproduce por sí sola la complejidad anatómica, metabólica y neural de la atrofia muscular real.
+
 
 ### Limitaciones fisiológicas
 
