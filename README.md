@@ -203,7 +203,7 @@ G(s)=\frac{F_s(s)}{F(s)}
 }.
 $$
 
-Esta función coincide con la implementada en `sistema.slx` y `Trejo23212239.py`.
+Esta función coincide con la implementada en `sistemaP3.slx` y `Suarez23212236.py`.
 
 ### 3. Modelos numéricos
 
