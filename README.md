@@ -145,8 +145,6 @@ La analogía no conserva necesariamente la topología: elementos mecánicos cone
 
 La modificación de $R$ representa el cambio de la componente viscosa. Los parámetros eléctricos son los valores utilizados para la experimentación *in silico* y no una conversión clínica directa.
 
-![Relación entre el sistema biológico, el modelo mecánico y el circuito equivalente](./Diagrama%20Biol%C3%B3gico.png)
-
 [Volver al contenido](#contenido)
 
 ---
@@ -297,7 +295,7 @@ La práctica solicita comparar las respuestas ante un impulso unitario durante $
 
 ### Distinción entre impulso ideal y señal implementada
 
-En `Trejo23212239.py` la entrada se construye mediante
+En `Suarez23212236.py` la entrada se construye mediante
 
 ```python
 F = np.zeros(N)
@@ -313,7 +311,7 @@ Por tanto, la señal utilizada es un **pulso rectangular de amplitud unitaria y 
 <a id="matlab"></a>
 ## Implementación en MATLAB, Simulink y Simscape
 
-El modelo `sistema.slx` integra las representaciones solicitadas:
+El modelo `sistemaP3.slx` integra las representaciones solicitadas:
 
 | Implementación | Descripción | Aspecto por verificar |
 |---|---|---|
@@ -324,7 +322,7 @@ El modelo `sistema.slx` integra las representaciones solicitadas:
 
 ### Ejecución desde MATLAB
 
-El cuaderno `Trejo23212239.mlx` abre el modelo, configura la simulación y recupera:
+El cuaderno `Suarez23212236.mlx` abre el modelo, configura la simulación y recupera:
 
 1. $F(t)$: señal de entrada.
 2. $F_{s,control}(t)$: respuesta del individuo sano.
@@ -334,7 +332,7 @@ El cuaderno `Trejo23212239.mlx` abre el modelo, configura la simulación y recup
 La configuración principal es:
 
 ```matlab
-open_system('sistema')
+open_system('sistemaP3')
 parameters.StopTime = '10';
 parameters.Solver = 'ode15s';
 parameters.MaxStep = '1e-3';
@@ -400,8 +398,6 @@ La evidencia de PID Tuner reporta:
 | Margen de fase | $90^\circ$ a $333\,\mathrm{rad/s}$ |
 | Estabilidad en lazo cerrado | Estable |
 
-![Ganancias y desempeño del controlador PI](./Ganancias.jpeg)
-
 ### 3. Cálculo de componentes del PI
 
 El programa incluye una realización analógica ideal con $C_r=1\,\mu\mathrm{F}$ y las relaciones
@@ -429,7 +425,7 @@ Estos valores son cálculos nominales. La práctica 5.5 se desarrolla exclusivam
 <a id="python"></a>
 ## Reproducción en Python
 
-`Trejo23212239.py` utiliza `numpy`, `matplotlib` y `python-control` para reproducir el análisis:
+`Suarez23212236.py` utiliza `numpy`, `matplotlib` y `python-control` para reproducir el análisis:
 
 1. Define el vector temporal y el pulso rectangular.
 2. Registra los parámetros de control y caso.
@@ -502,11 +498,11 @@ El aumento de $R$ desplaza el polo hacia el origen y ralentiza la respuesta sin 
 
 | Resultado | Archivo |
 |---|---|
-| Reporte del cuaderno MATLAB | [`Trejo23212239.pdf`](./Trejo23212239.pdf) |
+| Reporte del cuaderno MATLAB | [`Suarez23212236.pdf`](./Suarez23212236.pdf) |
 | Figura exportada por MATLAB/Simulink | [`senal_matlab.pdf`](./senal_matlab.pdf) |
-| Figura exportada por Python | [`Impulso_python.pdf`](./Impulso_python.pdf) |
-| Evidencia de sintonización | [`Ganancias.jpeg`](./Ganancias.jpeg) |
-| Análisis matemático manuscrito | [`AM3.pdf`](./AM3.pdf) |
+| Figura exportada por Python | [`Señal_python.pdf`](./Señal_python.pdf) |
+| Evidencia de sintonización | [`Propiedades_PID.jpeg`](./Propiedades_PID.jpeg) |
+| Análisis matemático manuscrito | [`Análisis Matemático P3.pdf`](./Análisis Matemático P3.pdf) |
 
 ### Verificación cruzada
 
@@ -610,15 +606,15 @@ La entrega puede organizarse de la siguiente manera:
 .
 ├── README.md                  # Reporte y guía de reproducción
 ├── CITATION.cff               # Datos de citación del repositorio
-├── Trejo23212239.mlx          # Cuaderno MATLAB
-├── Trejo23212239.pdf          # Exportación del cuaderno
-├── Trejo23212239.py           # Implementación Python
-├── sistema.slx                # Modelo Simulink/Simscape
-├── AM3.pdf                    # Análisis matemático por superposición
-├── Diagrama Biológico.png     # Diagrama fisiológico, mecánico y eléctrico
-├── Ganancias.jpeg             # Evidencia de sintonización del PI
+├── Suarez23212236.mlx          # Cuaderno MATLAB
+├── Suarez23212236.pdf          # Exportación del cuaderno
+├── Suarez23212236.py           # Implementación Python
+├── sistemaP3.slx                # Modelo Simulink/Simscape
+├── Análisis Matemático P3.pdf    # Análisis matemático por superposición
+├── Diagrama Biológico P3.png     # Diagrama fisiológico, mecánico y eléctrico
+├── Propiedades_PID.jpeg          # Evidencia de sintonización del PI
 ├── senal_matlab.pdf           # Resultado MATLAB/Simulink
-└── Impulso_python.pdf         # Resultado Python
+└── Señal_python.pdf         # Resultado Python
 ```
 
 Los nombres anteriores corresponden a los archivos proporcionados. Si algún archivo se renombra o se mueve a una subcarpeta, deben actualizarse sus rutas relativas en este README.
@@ -666,7 +662,7 @@ python -m pip install numpy matplotlib control
 
 ### Secuencia de reproducción en MATLAB/Simulink
 
-1. Colocar `Trejo23212239.mlx` y `sistema.slx` en el mismo directorio.
+1. Colocar `Suarez23212236.mlx` y `sistemaP3.slx` en el mismo directorio.
 2. Abrir el cuaderno en MATLAB.
 3. Verificar que los bloques de control y caso utilicen los parámetros de la tabla.
 4. Confirmar `StopTime = 10`, `Solver = ode15s` y `MaxStep = 1e-3`.
@@ -677,17 +673,17 @@ python -m pip install numpy matplotlib control
 ### Secuencia de reproducción en Python
 
 1. Instalar las dependencias.
-2. Colocar `Trejo23212239.py` en el directorio de trabajo.
+2. Colocar `Suarez23212236.py` en el directorio de trabajo.
 3. Ejecutar:
 
 ```bash
-python Trejo23212239.py
+python Suarez23212236.py
 ```
 
 4. Verificar los polos impresos para control y caso.
 5. Revisar los valores calculados de $R_e$ y $R_r$.
 6. Comparar la figura con el resultado de MATLAB/Simulink.
-7. Confirmar la creación de `Impulso_python.pdf`.
+7. Confirmar la creación de `Señal_python.pdf`.
 
 ### Resultados mínimos esperados
 
@@ -735,4 +731,4 @@ python Trejo23212239.py
 
 ## Uso académico
 
-Este repositorio documenta la práctica 5.5 de **Modelado de Sistemas Fisiológicos**. El modelo, las simulaciones y el controlador se emplean para desarrollar habilidades de interpretación, análisis matemático, programación, control y documentación técnica. Cualquier cambio de parámetros, señal de entrada, estructura del controlador o procedimiento debe identificarse y justificarse.
+Este repositorio documenta la práctica 3 de **Modelado de Sistemas Fisiológicos**. El modelo, las simulaciones y el controlador se emplean para desarrollar habilidades de interpretación, análisis matemático, programación, control y documentación técnica. Cualquier cambio de parámetros, señal de entrada, estructura del controlador o procedimiento debe identificarse y justificarse.
